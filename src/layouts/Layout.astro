@@ -1,3 +1,7 @@
+---
+import logo from '../assets/logo.svg'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +9,20 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>UnplashBox Images Collections</title>
 	</head>
 	<body>
+		<nav class="navbar navbar-primary d-flex justify-content-center row">
+			<div class="col-6 d-flex justify-content-start">
+				<a class="navbar-brand" href="#">
+					<img src={logo.src} alt="" width="130" height="50">
+				</a>
+			</div>
+			<div class="col-6 d-flex justify-content-end">
+				<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary option-home" type="button">Home</i></button>
+				<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary" type="button">Collections</i></button>
+			</div>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -18,5 +33,8 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: "BeVietnamPro-Light", sans-serif; 
+		font-weight: 100; 
+		font-style: normal; 
 	}
 </style>
