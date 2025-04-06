@@ -1,42 +1,44 @@
-@font-face {
-    font-family: 'BeVietnamPro-Regular';
-    src: url('../fonts/BeVietnamPro-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: 'BeVietnamPro-Medium';
-    src: url('../fonts/BeVietnamPro-Medium.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: 'BeVietnamPro-Light';
-    src: url('../fonts/BeVietnamPro-Light.ttf') format('ttf');
-}
+@import "@fontsource/be-vietnam-pro";
+@import "@fontsource/be-vietnam-pro/600.css";
+@import "@fontsource/be-vietnam-pro/500.css";
+@import "@fontsource/be-vietnam-pro/300.css";
 
 .font-xs {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
 }
   
 .font-sm {
-    font-size: 0.85rem !important;
+    font-size: 0.85rem;
 }
 
 .font-lg {
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
 .font-xl {
-    font-size: 2.25rem !important;
+    font-size: 2.25rem;
 }
 
 .font-bevietnampro-extrabold {
-    font-family: 'BeVietnamPro-Medium', sans-serif !important;
+    font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
 .font-bevietnampro-medium {
-    font-family: "BeVietnamPro-Light", sans-serif; 
-    font-weight: 100; 
+    font-family: "Be Vietnam Pro", sans-serif; 
+    font-weight: 500; 
+    font-style: normal; 
+}
+
+.font-bevietnampro-ligth {
+    font-family: "Be Vietnam Pro", sans-serif; 
+    font-weight: 300; 
+    font-style: normal; 
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300; 
     font-style: normal; 
 }

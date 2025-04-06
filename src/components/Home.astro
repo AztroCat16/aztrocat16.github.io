@@ -1,14 +1,18 @@
+---
+import search from '../assets/Search.svg';
+---
+
 <div class="container align-items-center">
     <img id="background" src="" alt="" fetchpriority="high" />
     <main>
         <section class="container center-element">
             <div class="row justify-content-md-center">
-                <div class="d-block col-sm-12 col-md-9 col-lg-7 col-xl-6 col-xxl-8">
+                <div class="col-sm-12 col-md-9 col-lg-7 col-xl-6 col-xxl-8 container-search">
                     <h1 class="text-center font-bevietnampro-extrabold font-xl">Search</h1>
-                    <h5 class="text-center font-bevietnampro-medium font-sm mb-4">Search high-resolution images from Unplash</h5>
+                    <h5 class="text-center font-bevietnampro-ligth font-sm mb-4">Search high-resolution images from Unplash</h5>
                     <div class="input-group mb-3 border">
-                        <input type="text" class="form-control pb-3 focus" placeholder="Enter your keywords.." aria-label="Enter your keywords.." aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                        <input type="text" class="form-control focus font-sm" placeholder="Enter your keywords.." aria-label="Enter your keywords.." aria-describedby="button-search">
+                        <button class="btn btn-search" type="button" id="button-search"><img src={search.src} alt="Icono"></button>
                     </div>
                 </div>
             </div>
@@ -22,7 +26,7 @@
             const newWidth = window.innerWidth;
             const imageElement = document.getElementById('background') as HTMLImageElement; // Asegura que es una imagen
 
-            if (newWidth < 1281 && imageElement) {
+            if (newWidth < 1400 && imageElement) {
                 imageElement.src = '/hero-image-1280.png'; // Cambiar a la imagen pequeña
             } else if (imageElement) {
                 imageElement.src = '/hero-image.png'; // Cambiar a la imagen grande

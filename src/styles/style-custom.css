@@ -1,6 +1,25 @@
-nav .container{
-    margin-left: 1px !important;
-    margin-right: 1px !important;
+.app-body {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.main {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease-in-out;
+    overflow-y: auto;
+    height: auto;
+    width: 100%;
+}
+
+.navbar {
+    background-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px var(--bs-border-style) #e5e7eb ;
+    padding-left: 30px ;
+    padding-right: 15px ;
 }
 
 #background {
@@ -28,11 +47,31 @@ nav .container{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
+.container-search {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 70px;
+}
 
 .btn-outline-secondary {
-    padding-right: 15px !important;
-    padding-left: 10px !important;
+    padding-top: 8px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 8px;
+    font-size: 0.875rem !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #e5e7eb;
+    color: black;
+}
+
+.btn-outline-secondary:active {
+    background-color: #e5e7eb !important;
+    color: black !important;
 }
 
 .btn-outline-secondary, .form-control{
@@ -41,32 +80,48 @@ nav .container{
 }
 
 .form-control{
-    padding-top: 14px !important;
-    padding-right: 15px !important;
-    padding-left: 15px !important;
+    padding-top: 18px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 18px;
+    color: #e5e7eb;
+    font-weight: 300 !important;
 }
 
 .form-control:focus{
-    outline:none !important;
-    outline-width: 0 !important;
+    outline:none ;
+    outline-width: 0 ;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
 .border {
-    box-shadow: 0px 0px 0.5px 0.5px rgba(158, 158, 158, 0.5);
-    border-color: white;
-    border-radius: 0.375rem;
+    box-shadow: 0px 4px 3px -1px rgba(212,212,212,0.33);
+    border-color: #e5e7eb !important;
+    border-radius: 0.450rem;
 }
 
-.navbar {
-    box-shadow: 0px 0px 0.5px 1px rgba(158, 158, 158, 0.5);
-    border-color: white;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+.btn-search {
+    cursor: pointer;
 }
 
-.option-home{
-    margin-right: 20px !important;
+.btn-search:hover, .btn-search:active, .btn-search:focus{
+    border: none;
+}
+
+@media (min-width: 1400px) {
+    .container-search {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-bottom: 110px;
+    }
+
+    .font-xl {
+        font-size: 3rem !important;
+    }
+
+    .font-sm {
+        font-size: 1.05rem !important;
+    }
 }

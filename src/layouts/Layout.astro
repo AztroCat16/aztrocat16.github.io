@@ -1,5 +1,5 @@
 ---
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.svg';
 ---
 
 <!doctype html>
@@ -11,30 +11,22 @@ import logo from '../assets/logo.svg'
 		<meta name="generator" content={Astro.generator} />
 		<title>UnplashBox Images Collections</title>
 	</head>
-	<body>
-		<nav class="navbar navbar-primary d-flex justify-content-center row">
-			<div class="col-6 d-flex justify-content-start">
-				<a class="navbar-brand" href="#">
-					<img src={logo.src} alt="" width="130" height="50">
-				</a>
+	<header class="navbar navbar-primary d-flex justify-content-beetwen">
+		<div class="d-flex justify-content-start">
+			<a class="navbar-brand" href="#">
+				<img src={logo.src} alt="" width="130" height="50">
+			</a>
+		</div>
+		<div class="d-flex justify-content-end">
+			<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary" type="button">Home</i></button>
+			<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary" type="button">Collections</i></button>
+		</div>
+	</header>
+	<body class="app-body">
+		<main class="main">
+			<div id="mainDiv" class="container-fluid">
+				<slot />
 			</div>
-			<div class="col-6 d-flex justify-content-end">
-				<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary option-home" type="button">Home</i></button>
-				<button class="font-lg font-bevietnampro-medium btn btn-outline-secondary" type="button">Collections</i></button>
-			</div>
-		</nav>
-		<slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		font-family: "BeVietnamPro-Light", sans-serif; 
-		font-weight: 100; 
-		font-style: normal; 
-	}
-</style>
